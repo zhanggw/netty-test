@@ -1,4 +1,4 @@
-package org.zhanggw.netty.discard_server;
+package org.zhanggw.netty.test;
 
 import javax.sound.sampled.Port;
 

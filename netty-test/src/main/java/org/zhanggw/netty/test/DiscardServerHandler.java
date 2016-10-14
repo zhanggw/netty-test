@@ -1,4 +1,4 @@
-package org.zhanggw.netty.discard_server;
+package org.zhanggw.netty.test;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

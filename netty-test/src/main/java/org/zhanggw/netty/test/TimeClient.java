@@ -1,4 +1,4 @@
-package org.zhanggw.netty.discard_server;
+package org.zhanggw.netty.test;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
