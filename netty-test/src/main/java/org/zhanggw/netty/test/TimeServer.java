@@ -30,7 +30,7 @@ public class TimeServer {
 								protected void initChannel(SocketChannel ch)
 										throws Exception {
 									//ch.pipeline().addLast(new DiscardServerHandler());
-									ch.pipeline().addLast(new TimeServerHandler()).addLast(new TimeEncoder());
+									ch.pipeline().addLast(new TimeEncoder()).addLast(new TimeServerHandler());
 								}
 								
 							})
