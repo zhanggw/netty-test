@@ -1,7 +1,5 @@
 package org.zhanggw.netty.test;
 
-import javax.sound.sampled.Port;
-
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -32,7 +30,7 @@ public class TimeServer {
 								protected void initChannel(SocketChannel ch)
 										throws Exception {
 									//ch.pipeline().addLast(new DiscardServerHandler());
-									ch.pipeline().addLast(new TimeServerHandler());
+									ch.pipeline().addLast(new TimeServerHandler()).addLast(new TimeEncoder());
 								}
 								
 							})
