@@ -32,6 +32,40 @@
 			<artifactId>netty-codec</artifactId>
 			<version>4.1.5.Final</version>
 		</dependency>
-
+		<dependency>
+    			<groupId>com.google.protobuf</groupId>
+    			<artifactId>protobuf-java</artifactId>
+    			<version>2.5.0</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>org.zhanggw.netty.serialization.SubscribeRequestServer</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
 </project>
